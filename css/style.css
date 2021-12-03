@@ -11,7 +11,7 @@ body {
 p, .paragraph {
   font-weight: 400;
   color: #4c4c4c;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.8;
   font-family: "Roboto", sans-serif;
 }
@@ -183,7 +183,7 @@ a:hover {
 }
 
 .section {
-  padding-top: 80px;
+  padding-top: 50px;
   padding-bottom: 80px;
 }
 .section-title {
@@ -416,9 +416,9 @@ textarea.form-control {
 .navbar-dark .navbar-nav .nav-link {
   color: #fff;
 }
-
+/* hero section at the top */
 .hero-area {
-  padding: 300px 0 200px;
+  padding: 191px 0 200px;
   position: relative;
 }
 @media (max-width: 767px) {
@@ -664,7 +664,7 @@ textarea.form-control {
 }
 
 .section-on-footer {
-  margin-bottom: -250px;
+  margin-bottom: -155px;
 }
 
 .shadow-down {
