@@ -748,8 +748,8 @@ blockquote {
 }
 .page-title-alt .bg-shape-3 {
   position: absolute;
-  left: 30%;
-  top: 50px;
+  /* left: 30%; */
+  top: 7px;
   transform: rotate(180deg);
 }
 .page-title-alt .bg-shape-4 {
@@ -798,8 +798,8 @@ blockquote {
 }
 .page-title .bg-shape-5 {
   position: absolute;
-  left: 90px;
-  bottom: -50px;
+  left: 10px;
+  bottom: 33px;
   transform: rotate(180deg);
 }
 .page-title .bg-shape-6 {
