@@ -186,9 +186,12 @@ a:hover {
   padding-top: 50px;
   padding-bottom: 80px;
 }
+
+/* source code / playfair ************/
 .section-title {
   margin-bottom: 80px;
-  font-family: "Playfair Display", serif !important;
+  font-family: "Source Code Pro", serif !important;
+  font-weight: bold;
 }
 
 .bg-cover {
