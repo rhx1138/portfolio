@@ -21,7 +21,7 @@ p-lg, .paragraph-lg {
 
 h1, h2, h3, h4, h5, h6 {
   color: #000;
-  font-family: "Playfair Display", serif;
+  font-family: "Source Code Pro", serif;
   line-height: 1.2;
 }
 
@@ -62,7 +62,7 @@ h6, .h6 {
 /* Button style */
 .btn {
   font-size: 22px;
-  font-family: "Playfair Display", serif;
+  font-family: "Source Code Pro", serif;
   text-transform: capitalize;
   padding: 16px 44px;
   border-radius: 5px;
@@ -188,7 +188,7 @@ a:hover {
 }
 .section-title {
   margin-bottom: 80px;
-  font-family: "Playfair Display", serif;
+  font-family: "Playfair Display", serif !important;
 }
 
 .bg-cover {
@@ -297,11 +297,12 @@ a:hover {
 }
 
 .font-secondary {
-  font-family: "Playfair Display", serif !important;
+  font-family: "Source Code Pro", serif !important;
+  font-weight: bold;
 }
 
 .font-tertiary {
-  font-family: "Playfair Display", serif !important;
+  font-family: "Source Code Pro", serif !important;
 }
 
 .shadow {
@@ -405,7 +406,7 @@ textarea.form-control {
 }
 
 .navbar .nav-item .nav-link {
-  font-family: "Playfair Display", serif;
+  font-family: "Source Code Pro", serif;
   text-transform: uppercase;
   padding: 15px;
 }
@@ -707,7 +708,7 @@ blockquote {
   margin-bottom: 20px;
 }
 .content strong {
-  font-family: "Playfair Display", serif;
+  font-family: "Source Code Pro", serif;
   font-size: 22px;
   font-weight: normal;
   color: #000;
