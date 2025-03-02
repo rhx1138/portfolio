@@ -3,323 +3,389 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ryan Hendrix</title>
+    <title>Your Name - Web Developer & Product Designer</title>
     <style>
-            :root {
-            --bg-color: #282c34;
-            --text-color: #abb2bf;
-            --highlight-color: #98c379;
-            --secondary-color: #61afef;
-            --accent-color: #c678dd;
-            --link-color: #56b6c2;
-            --section-bg: rgba(40, 44, 52, 0.7);
-        }
-        
+        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #1a1a1f;
+            color: #e8e8e8;
             line-height: 1.6;
-            padding: 20px;
-            max-width: 100%;
-            overflow-x: hidden;
+            padding: 0 20px;
         }
-        
+
+        a {
+            color: #e8e8e8;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        /* Layout */
         .container {
-            max-width: 800px;
+            max-width: 1100px;
             margin: 0 auto;
+            padding: 40px 0;
         }
-        
+
         header {
+            margin-bottom: 60px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #a0a0a0;
             margin-bottom: 30px;
         }
-        
-        h1 {
-            font-size: 2.2rem;
-            color: var(--highlight-color);
-            margin-bottom: 5px;
+
+        h3 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 16px;
+            color: #8e8e9a;
         }
-        
-        h2 {
-            font-size: 1.5rem;
-            color: var(--secondary-color);
-            margin: 25px 0 15px 0;
-            border-bottom: 1px solid var(--secondary-color);
-            padding-bottom: 5px;
-        }
-        
-        .location {
+
+        .bio {
             font-size: 1.1rem;
-            margin-bottom: 15px;
-            color: var(--text-color);
+            max-width: 600px;
+            margin: 30px 0;
+            color: #cccccc;
         }
-        
-        .contact-info {
-            margin-bottom: 20px;
+
+        /* Navigation */
+        nav {
             display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+            justify-content: space-between;
+            padding: 20px 0;
+            margin-bottom: 60px;
         }
-        
-        .contact-info a {
-            color: var(--link-color);
-            text-decoration: none;
-            margin-right: 15px;
+
+        .logo {
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: #ffffff;
         }
-        
-        .contact-info a:hover {
-            text-decoration: underline;
+
+        .nav-links a {
+            margin-left: 24px;
+            opacity: 0.8;
         }
-        
-        .projects {
-            margin-top: 30px;
+
+        .nav-links a:hover {
+            opacity: 1;
         }
-        
-        .project-list {
+
+        /* Project Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .project-card {
+            background-color: #242428;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 180px;
+            background-color: #32323a;
             display: flex;
-            flex-direction: column;
-            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            color: #a0a0a0;
+            font-size: 0.9rem;
         }
-        
-        .project-item {
-            padding: 5px 0;
+
+        .project-info {
+            padding: 20px;
         }
-        
-        .project-item a {
-            color: var(--link-color);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .project-item a:hover {
-            color: var(--accent-color);
-        }
-        
-        .experience {
-            margin-top: 30px;
-        }
-        
-        .job {
-            margin-bottom: 20px;
-            padding: 15px;
-            background-color: var(--section-bg);
-            border-left: 3px solid var(--highlight-color);
-            border-radius: 4px;
-        }
-        
-        .job-title {
-            font-weight: bold;
-            color: var(--highlight-color);
-            margin-bottom: 5px;
-        }
-        
-        .job-period {
-            font-style: italic;
-            color: var(--accent-color);
-            margin-bottom: 10px;
-        }
-        
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        
-        ul li {
-            position: relative;
-            padding-left: 20px;
+
+        .project-title {
+            font-size: 1.1rem;
+            font-weight: 500;
             margin-bottom: 8px;
+            color: #ffffff;
         }
-        
-        ul li::before {
-            content: "•";
-            color: var(--secondary-color);
-            position: absolute;
-            left: 0;
-            top: 0;
+
+        .project-description {
+            color: #b0b0b0;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
         }
-        
-        .education {
-            margin-top: 30px;
+
+        .project-date {
+            color: #8e8e9a;
+            font-size: 0.85rem;
         }
-        
-        .degree {
-            margin-bottom: 15px;
-            padding: 15px;
-            background-color: var(--section-bg);
-            border-left: 3px solid var(--accent-color);
-            border-radius: 4px;
+
+        /* Updates Section */
+        .updates-list {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
-        .degree-title {
-            font-weight: bold;
-            color: var(--accent-color);
-        }
-        
-        .school {
-            font-style: italic;
-        }
-        
-        .skills {
-            margin-top: 30px;
-        }
-        
-        .skill-list {
+
+        .update-item {
             display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 10px;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
-        .skill-tag {
-            background-color: var(--section-bg);
-            color: var(--highlight-color);
-            padding: 5px 10px;
-            border-radius: 15px;
+
+        .update-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-right: 10px;
+        }
+
+        .update-tag.new {
+            background-color: #1e3a5f;
+            color: #64b5f6;
+        }
+
+        .update-tag.project {
+            background-color: #1e3c2f;
+            color: #66bb6a;
+        }
+
+        .update-content {
+            flex: 1;
+            margin-left: 10px;
+            color: #cccccc;
+        }
+
+        .update-date {
+            color: #8e8e9a;
+        }
+
+        /* Status */
+        .status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .status-available {
+            background-color: #243b2e;
+            color: #7cb342;
+            border: 1px solid #43a047;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 100px;
+            padding-bottom: 40px;
+            color: #8e8e9a;
             font-size: 0.9rem;
-            border: 1px solid var(--highlight-color);
         }
-        
-        .footer {
-            margin-top: 40px;
-            text-align: center;
-            font-size: 0.9rem;
-            color: var(--text-color);
-            padding-top: 20px;
-            border-top: 1px solid var(--secondary-color);
+
+        /* Two column layout for About section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
         }
-        
-        @media (max-width: 600px) {
-            body {
-                padding: 15px;
+
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
             }
             
-            h1 {
-                font-size: 1.8rem;
+            .project-grid {
+                grid-template-columns: 1fr;
             }
-            
-            h2 {
-                font-size: 1.3rem;
-            }
-            
-            .job, .degree {
-                padding: 10px;
-            }
+        }
+
+        /* Mode toggle */
+        .mode-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: #ffffff;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: background 0.3s;
+        }
+
+        .mode-toggle:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Accent colors for some interactive elements */
+        .accent-hover:hover {
+            color: #64b5f6;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Ryan Hendrix</h1>
-            <div class="location">Terre Haute, IN</div>
-            <div class="contact-info">
-                <!-- <a href="mailto:ryanjhendrix@gmail.com">ryanjhendrix@gmail.com</a>
-                <a href="tel:8312362148">831-236-2148</a> -->
-                <a href="#" id="github-link">GitHub</a> <!-- Placeholder to be updated -->
+        <nav>
+            <a href="#" class="logo">YourName</a>
+            <div class="nav-links">
+                <a href="#work" class="accent-hover">Work</a>
+                <a href="#updates" class="accent-hover">Updates</a>
+                <a href="#about" class="accent-hover">About</a>
+                <a href="#contact" class="accent-hover">Contact</a>
             </div>
+        </nav>
+
+        <header>
+            <h1>Your Name</h1>
+            <h2>Web Developer & Product Designer</h2>
+            <p class="bio">Focused on creating inclusive digital experiences that solve real-world problems. Currently working for a non-profit organization building tools for positive social impact.</p>
+            <div class="status status-available">Available for collaborations</div>
         </header>
-        
-        <section class="experience">
-            <h2>💼 Professional Experience</h2>
-            
-            <div class="job">
-                <div class="job-title">Independent Contractor</div>
-                <div class="job-period">Dec 2019 – Present</div>
-                <ul>
-                    <li>Managed global strategies for clients.</li>
-                    <li>Revenue generation, website updates & maintenance.</li>
-                    <li>Managed marketing & brand promotion for an e-commerce store.</li>
-                    <li>Researched & wrote Amazon and e-commerce listings.</li>
-                    <li>Created custom logos and product edits using Photoshop.</li>
-                    <li>Established strategy for product marketability in the US.</li>
-                </ul>
-                <div style="margin-top: 10px;">
-                    <strong>Key Achievements:</strong>
-                    <ul>
-                        <li>Increased online sales by 25% for key clients.</li>
-                        <li>Delivered an Android application on time as a product manager.</li>
+
+        <section id="work">
+            <h3>Selected Projects</h3>
+            <div class="project-grid">
+                <a href="#" class="project-card">
+                    <div class="project-image">Project Thumbnail</div>
+                    <div class="project-info">
+                        <div class="project-title">Non-Profit Website Redesign</div>
+                        <div class="project-description">Improved accessibility and user experience for organization serving 50,000+ people annually</div>
+                        <div class="project-date">2024</div>
+                    </div>
+                </a>
+                <a href="#" class="project-card">
+                    <div class="project-image">Project Thumbnail</div>
+                    <div class="project-info">
+                        <div class="project-title">Donation Platform</div>
+                        <div class="project-description">Streamlined donation process with 35% increase in conversion rate</div>
+                        <div class="project-date">2023</div>
+                    </div>
+                </a>
+                <a href="#" class="project-card">
+                    <div class="project-image">Project Thumbnail</div>
+                    <div class="project-info">
+                        <div class="project-title">Community Resource App</div>
+                        <div class="project-description">Mobile application connecting volunteers with opportunities</div>
+                        <div class="project-date">2022</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="updates">
+            <h3>Recent Updates</h3>
+            <div class="updates-list">
+                <div class="update-item">
+                    <div>
+                        <span class="update-tag new">New</span>
+                    </div>
+                    <div class="update-content">
+                        Launched accessibility improvements for the donation platform
+                    </div>
+                    <div class="update-date">2025-02-28</div>
+                </div>
+                <div class="update-item">
+                    <div>
+                        <span class="update-tag project">Project</span>
+                    </div>
+                    <div class="update-content">
+                        Started work on volunteer management system
+                    </div>
+                    <div class="update-date">2025-02-15</div>
+                </div>
+                <div class="update-item">
+                    <div>
+                        <span class="update-tag new">New</span>
+                    </div>
+                    <div class="update-content">
+                        Published case study on the community resource app
+                    </div>
+                    <div class="update-date">2025-01-20</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h3>About</h3>
+            <div class="about-grid">
+                <div>
+                    <p>I'm a web developer and product designer with a passion for creating digital experiences that make a positive impact. Currently working at a non-profit organization where I lead web development initiatives and design digital products.</p>
+                    <p style="margin-top: 20px;">My background combines formal design education with self-taught programming skills, allowing me to bridge the gap between design and implementation.</p>
+                </div>
+                <div>
+                    <p>I specialize in:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>User-centered design processes</li>
+                        <li>Front-end development (HTML, CSS, JavaScript)</li>
+                        <li>React and modern JavaScript frameworks</li>
+                        <li>Accessibility (WCAG) implementation</li>
+                        <li>Design systems and component libraries</li>
                     </ul>
                 </div>
             </div>
-            
-            <div class="job">
-                <div class="job-title">Senior Project Consultant / Sales Team Lead – Huáer Jie (华尔街)</div>
-                <div class="job-period">May 2017 – Nov 2019</div>
-                <ul>
-                    <li>Managed a team of 10 service staff & 6 sales members.</li>
-                    <li>Coordinated executive-level Business English courses.</li>
-                    <li>Achieved over 100% of sales targets.</li>
-                    <li>Liaised between sales & service teams for better B2B execution.</li>
-                    <li>Developed corporate training curricula for:
-                        <ul>
-                            <li>Huawei</li>
-                            <li>CITIC Securities</li>
-                            <li>Jabil</li>
-                            <li>Tencent</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
         </section>
-        
-        <section class="education">
-            <h2>🎓 Education</h2>
-            
-            <div class="degree">
-                <div class="degree-title">Master of Arts, International Policy Studies</div>
-                <div class="school">Middlebury Institute of International Studies at Monterey, CA</div>
-            </div>
-            
-            <div class="degree">
-                <div class="degree-title">Bachelor of Science, Graphic Design</div>
-                <div class="school">Indiana State University, Terre Haute, IN</div>
-            </div>
+
+        <section id="contact">
+            <h3>Get in Touch</h3>
+            <p>Interested in working together or just want to connect? Feel free to reach out.</p>
+            <p style="margin-top: 20px;">
+                <a href="mailto:hello@yourname.com" style="color: #64b5f6; border-bottom: 1px solid rgba(100, 181, 246, 0.3);">hello@yourname.com</a>
+            </p>
         </section>
-        
-        <section class="skills">
-            <h2>🛠 Skills</h2>
-            <div class="skill-list">
-                <div class="skill-tag">Web Development (HTML, CSS, JavaScript)</div>
-                <div class="skill-tag">Project Management</div>
-                <div class="skill-tag">E-Commerce</div>
-                <div class="skill-tag">Graphic Design</div>
-                <div class="skill-tag">Sales & Business Development</div>
-            </div>
-        </section>
-        
-        <section class="projects">
-            <h2>Projects</h2>
-            <div class="project-list">
-                <div class="project-item"><a href="#">Web Development</a></div>
-                <div class="project-item"><a href="#">Graphic Design</a></div>
-                <div class="project-item"><a href="#">E-Commerce Solutions</a></div>
-                <div class="project-item"><a href="#">Corporate Training</a></div>
-                <div class="project-item"><a href="#">Mobile Applications</a></div>
-            </div>
-        </section>
-        
-        <div class="footer">
-            <p>Updated February, 2025</p>
-            <button id="download-resume" style="margin-top: 10px; padding: 8px 15px; background-color: var(--highlight-color); color: var(--bg-color); border: none; border-radius: 4px; cursor: pointer;">Download PDF Resume</button>
-        </div>
+
+        <footer>
+            © 2025 Your Name — Designed and coded with care
+        </footer>
     </div>
 
+    <button class="mode-toggle" id="modeToggle">☀️</button>
+
     <script>
-        // Placeholder for GitHub link update functionality
-        document.getElementById('github-link').addEventListener('click', function(e) {
-            e.preventDefault();
-            alert('GitHub profile link needs to be updated');
-        });
-        
-        // Placeholder for resume download functionality
-        document.getElementById('download-resume').addEventListener('click', function() {
-            alert('Resume download functionality will be implemented here');
+        // Simple dark/light mode toggle
+        document.getElementById('modeToggle').addEventListener('click', function() {
+            alert('Light mode styles would be applied here. This is just a placeholder.');
         });
     </script>
 </body>
