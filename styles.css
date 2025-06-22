@@ -131,6 +131,16 @@ nav {
     font-weight: 600;
     letter-spacing: 0.5px;
     color: var(--heading-color);
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 63px;
+    width: auto;
+    vertical-align: middle;
+    transform: translateY(-19px);
+    /* margin-top: -25px; */
 }
 
 .nav-links a {
